@@ -28,7 +28,7 @@ import javafx.scene.text.TextFlow;
 
 public class ihm extends Application {
 	
-
+//
 	@Override
 	public void start(Stage primaryStage) {
 		primaryStage.setTitle("Marché d'ici");
@@ -477,7 +477,7 @@ public class ihm extends Application {
 
 			productBox4.getChildren().addAll(imageView4, productNameLabel4, descriptionLabel4, priceLabel4,
 					addToCartButton4);
-			productsGrid.add(productBox4, 4, 0);
+			productsGrid.add(productBox4, 3, 0);
 //___P5____________
 			   VBox productBox5 = new VBox();
 	            productBox5.setAlignment(Pos.CENTER);
@@ -497,7 +497,7 @@ public class ihm extends Application {
 
 				productBox5.getChildren().addAll(imageView5, productNameLabel5, descriptionLabel5, priceLabel5,
 						addToCartButton5);
-				productsGrid.add(productBox5, 5, 0);
+				productsGrid.add(productBox5, 4, 0);
 //________P6_____
 				 VBox productBox6 = new VBox();
 		            productBox6.setAlignment(Pos.CENTER);
@@ -561,9 +561,28 @@ public class ihm extends Application {
 										addToCartButton8);
 								productsGrid.add(productBox8, 2, 1);
 						
+//__________P9__________
+								 VBox productBox9 = new VBox();
+						            productBox9.setAlignment(Pos.CENTER);
+						            productBox9.setSpacing(10);
 
+						            File file9 = new File("/Users/PC_DELL/eclipse-workspace/Pitaya.jpg");
+									Image image9 = new Image(file9.toURI().toString());
+									ImageView imageView9 = new ImageView(image9);
+									imageView9.setFitWidth(200);
+									imageView9.setFitHeight(200);
+
+									Label productNameLabel9 = new Label("Pitaya");
+									Label descriptionLabel9 = new Label("Pitaya dit fruit du dragon, par pièce");
+									Label priceLabel9 = new Label("4.50€");
+
+									Button addToCartButton9 = new Button("Ajouter au panier");
+
+									productBox9.getChildren().addAll(imageView9, productNameLabel9, descriptionLabel9, priceLabel9,
+											addToCartButton9);
+									productsGrid.add(productBox9, 3, 1);
             
-//__________QUE FAIT CA ???? _______________________________________________________________
+//__________ _______________________________________________________________
             StackPane newContent = new StackPane(mainContainer);
             newContent.setPadding(new Insets(20));
 
@@ -624,7 +643,7 @@ public class ihm extends Application {
 			productBoxf.setAlignment(Pos.CENTER);
 			productBoxf.setSpacing(10);
 
-			File fil = new File("/Users/PC_DELL/eclipse-workspace/couche.jpg");
+			File fil = new File("/Users/PC_DELL/eclipse-workspace/brosse.jpg");
 			Image imagef = new Image(fil.toURI().toString());
 			ImageView imageViewf = new ImageView(imagef);
 			imageViewf.setFitWidth(200);
